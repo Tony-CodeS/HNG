@@ -6,9 +6,11 @@ const app = express()
 
 app.use(express.json())
 
-// app.get('/', (req, res)=>{
-//     res.send("Hello World")
-// })
+app.get('/', (req, res)=>{
+    res.json({success:true, message:'Welcome to hng task'})
+})
+
+
 
 app.use('/user', router)
 
